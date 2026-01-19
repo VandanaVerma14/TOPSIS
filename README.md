@@ -1,14 +1,10 @@
-# TOPSIS Python Package
+# TOPSIS
 
-## Installation
-pip install Topsis-Vandana-102303443
+This repository contains the implementation of the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) method.
 
-## Usage
-topsis input.csv "1,1,1,1" "+,+,-,+" output.csv
+## Python Package
+Package Name: topsis-vandana-102303443  
 
-## Input Format
-First column: Alternatives  
-Remaining columns: Criteria values
-
-## Output
-CSV file with Topsis Score and Rank
+Install using:
+```bash
+pip install topsis-vandana-102303443
