@@ -42,7 +42,7 @@ This version is suitable for users who prefer terminal-based execution.
 - Supports execution directly from the command line  
 
 🔗 **PyPI Link:**  
-https://pypi.org/project/topsis-vandana-123456/
+https://pypi.org/project/Topsis-Vandana-102303443/
 
 ---
 
