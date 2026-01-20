@@ -7,7 +7,11 @@ from email.message import EmailMessage
 
 # ✅ Ensure required folders exist
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="../templates"
+)
+
 
 
 def run_topsis(input_file, weights, impacts):
