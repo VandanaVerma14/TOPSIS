@@ -8,3 +8,21 @@ Command Line Application
 Python Package
 
 Web Application
+
+🔍 Methodology
+
+The TOPSIS method follows these steps:
+
+Data Input (CSV)
+        ↓
+Data Validation (Numeric values, Weights & Impacts)
+        ↓
+Normalization & Weight Application
+        ↓
+Ideal Best & Ideal Worst Determination
+        ↓
+Distance Calculation
+        ↓
+TOPSIS Score Computation
+        ↓
+Ranking of Alternatives
