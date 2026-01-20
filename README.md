@@ -11,18 +11,11 @@ Web Application
 
 🔍 Methodology
 
-The TOPSIS method follows these steps:
+flowchart LR
+    A[Data Input<br/>(CSV File)]
+    B[Data Validation<br/>(Numeric Values,<br/>Weights & Impacts Check)]
+    C[Normalization &<br/>Weight Application]
+    D[Ideal Solution<br/>Determination<br/>(Best & Worst)]
+    E[Ranking & Result<br/>Generation<br/>(Table & Graph)]
 
-Data Input (CSV)
-        ↓
-Data Validation (Numeric values, Weights & Impacts)
-        ↓
-Normalization & Weight Application
-        ↓
-Ideal Best & Ideal Worst Determination
-        ↓
-Distance Calculation
-        ↓
-TOPSIS Score Computation
-        ↓
-Ranking of Alternatives
+    A --> B --> C --> D --> E
