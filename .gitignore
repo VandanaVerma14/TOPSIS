@@ -43,4 +43,4 @@ Thumbs.db
 # Uploaded files and temporary data
 uploads/
 results/
-*.csv
+.csv
