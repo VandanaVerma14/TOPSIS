@@ -10,5 +10,9 @@
       "src": "/(.*)",
       "dest": "api/index.py"
     }
-  ]
+  ],
+  "env": {
+    "EMAIL_USER": "@EMAIL_USER",
+    "EMAIL_PASS": "@EMAIL_PASS"
+  }
 }
