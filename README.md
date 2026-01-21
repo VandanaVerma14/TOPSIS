@@ -56,7 +56,7 @@ https://pypi.org/project/Topsis-Vandana-102303443/
 - Hosted on the **Vercel cloud platform**
 
 🌐 **Live Web Application:**  
-https://topsisweb-nu.vercel.app/
+https://topsis-vandana.vercel.app/
 
 ---
 
