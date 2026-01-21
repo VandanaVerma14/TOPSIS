@@ -1,18 +1,24 @@
 {
+  "buildCommand": "pip install -r requirements.txt",
+  "outputDirectory": ".",
   "builds": [
     {
       "src": "api/index.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.11"
+      }
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "api/index.py"
     }
-  ],
-  "env": {
-    "EMAIL_USER": "@EMAIL_USER",
-    "EMAIL_PASS": "@EMAIL_PASS"
-  }
+  ]
 }
