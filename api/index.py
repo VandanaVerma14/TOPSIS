@@ -3,15 +3,12 @@ import pandas as pd
 import numpy as np
 import os
 import smtplib
+import tempfile
 from email.message import EmailMessage
 from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
-UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
-
-# Create uploads folder if it doesn't exist
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app = Flask(
     __name__,
@@ -89,12 +86,15 @@ def index():
             if file.filename == "":
                 return "No file selected", 400
 
-            # ✅ Correct file saving (Windows-safe)
-            input_path = os.path.join(UPLOAD_FOLDER, file.filename)
-            file.save(input_path)
-
+            # Use temporary directory for Vercel compatibility
+            with tempfile.NamedTemporaryFile(mode='wb', suffix='.csv', delete=False) as tmp_file:
+                file.save(tmp_file.name)
+                input_path = tmp_file.name
 
             result_df = run_topsis(input_path, weights, impacts)
+            
+            # Clean up temp file
+            os.unlink(input_path)
 
             if send_email_flag and email:
                 try:
